@@ -7,7 +7,6 @@ services:
     restart: ${RESTART_POLICY}
     ports:
       - ${PORT}:80
-
 networks:
     default:
       name:  ${AHW_DOCKER_NETWORK}
