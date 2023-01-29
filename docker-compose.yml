@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mbgl_renderer:
+    container_name: mbgl_renderer
+    image: consbio/mbgl-renderer:latest    
+    restart: ${RESTART_POLICY}
+    ports:
+      - ${PORT}:80
+
+networks:
+    default:
+      name:  ${AHW_DOCKER_NETWORK}
+      external: true
